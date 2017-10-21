@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bujit</title>
+  <link rel="stylesheet" type="text/css" href="budjit.css"/>
+</head>
+
+<body>
+
+<input type="text" id="budgetInput" value="1000" placeholder="BUDGET">
+
+<button type="button" onclick="budgetMax()">Set Budget</button>
+
+<div id="slidecontainer">
+<input type="range" min="0" max="1000" value="50%" class="slider" id="myRange" oninput="budgetValue(this.value);" step="10">
+</div>
+
+<br>
+
+<input class="budgets" id="budgetLeft" value="">
+<input class="budgets" id="budgetRight" value="">
+
+<br><br><br>
+
+<input id="fromBox" placeholder="FROM">
+<input id="toBox" placeholder="TO">
+
+<br><br>
+
+<button type="button" onclick="window.location.href='file:///Users/luqas/Documents/Hackathon/results.php'">Budjit!</button>
+
+<br><br>
+
+<input id="parsed" value="">
+
+<script type="text/javascript">
+    function budgetValue(val) {
+    document.getElementById("budgetLeft").value=val;
+    document.getElementById("budgetRight").value=document.getElementById("myRange").max-val;
+    }
+
+    function budgetMax() {
+    var maxi = document.getElementById("budgetInput").value;
+    var x = document.getElementById("myRange").max = maxi;
+    }
+
+    var blah = src="http://transportapi.com/v3/uk/places.json?query=cardiff&type=train_station&app_id=d897d02c&app_key=946581d28e34448757fed33aa161590f";
+    var blahParsed = JSON.parse(blah);
+
+    document.write(blahParsed)
+
+</script>
+
+</body>
+
+</html>
