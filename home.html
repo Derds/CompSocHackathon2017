@@ -17,34 +17,29 @@
 <input type="range" min="0" max="1000" value="50%" class="slider" id="myRange" oninput="budgetValue(this.value);" step="10">
 </div>
 
-<br>
 
-<input class="budgets" id="budgetLeft" value="500">
-<input class="budgets" id="budgetRight" value="500">
+<input class="budgets" id="budgetLeft" value="£500">
+<input class="budgets" id="budgetRight" value="£500">
 
-<br><br><br>
 
 <input id="fromBox" placeholder="FROM">
 <input id="toBox" placeholder="TO">
 
-<br><br>
-
 <button type="button" onclick="window.location.href='file:///Users/luqas/Documents/Hackathon/results.php'">Budjit!</button>
 
-<br><br>
 
 <script type="text/javascript">
     function budgetValue(val) {
-    document.getElementById("budgetLeft").value=val;
-    document.getElementById("budgetRight").value=document.getElementById("myRange").max-val;
+    document.getElementById("budgetLeft").value="£" + val;
+    document.getElementById("budgetRight").value="£" + (document.getElementById("myRange").max-val);
     }
 
     function budgetMax() {
     var maxBudget = document.getElementById("budgetInput").value;
     var x = document.getElementById("myRange").max = maxBudget;
 
-    document.getElementById("budgetLeft").value=document.getElementById("myRange").value;
-    document.getElementById("budgetRight").value=x-document.getElementById("myRange").value;
+    document.getElementById("budgetLeft").value="£" + document.getElementById("myRange").value;
+    document.getElementById("budgetRight").value="£" + x-document.getElementById("myRange").value;
     }
 
 </script>
