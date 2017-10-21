@@ -19,8 +19,8 @@
 
 <br>
 
-<input class="budgets" id="budgetLeft" value="">
-<input class="budgets" id="budgetRight" value="">
+<input class="budgets" id="budgetLeft" value="500">
+<input class="budgets" id="budgetRight" value="500">
 
 <br><br><br>
 
@@ -33,8 +33,6 @@
 
 <br><br>
 
-<input id="parsed" value="">
-
 <script type="text/javascript">
     function budgetValue(val) {
     document.getElementById("budgetLeft").value=val;
@@ -42,14 +40,12 @@
     }
 
     function budgetMax() {
-    var maxi = document.getElementById("budgetInput").value;
-    var x = document.getElementById("myRange").max = maxi;
+    var maxBudget = document.getElementById("budgetInput").value;
+    var x = document.getElementById("myRange").max = maxBudget;
+
+    document.getElementById("budgetLeft").value=document.getElementById("myRange").value;
+    document.getElementById("budgetRight").value=x-document.getElementById("myRange").value;
     }
-
-    var blah = src="http://transportapi.com/v3/uk/places.json?query=cardiff&type=train_station&app_id=d897d02c&app_key=946581d28e34448757fed33aa161590f";
-    var blahParsed = JSON.parse(blah);
-
-    document.write(blahParsed)
 
 </script>
 
