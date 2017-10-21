@@ -1,45 +1,157 @@
+/*Colours: 
+Umber:#5C573E;
+Sunset Orange: #EE6055;
+Sandy Brown: #F79D5C;
+Pale Green: #AAF683;
+Medium Aquamarine: #60D394;
+*/
+
+
 body {
-text-align: center;
-}
-
-.slider {
-    -webkit-appearance: none;
-    width: 50%;
-    height: 15px;
-    border-radius: 5px;  
-    background: #d3d3d3 ;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
- }
- 
- .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50 ;
-    cursor: pointer;
- }
- 
- .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50 ;
-    cursor: pointer;
- }
-
- input {
-    border: 0px solid;
-    height: 20px;
-    width: 80px;
-    color: rgb(0, 0, 0);
     text-align: center;
- }
+    font-family: "Verdana", sans-serif;
+    }
+    
+    p span {
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        } 
+    
+    span.budgets{
+        padding-bottom: 20px;
+        }
+    
+    * {
+      margin: 0;
+    }
+    html, body {
+      height: 100%;
+      /*umber*/
+      background-color: rgb(52, 113, 247);
+    }
+    
+    .slider {
+        -webkit-appearance: none;
+        width: 50%;
+        height: 15px;
+        border-radius: 5px;
+        background: #ffffff ;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+     }
+     
+     .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: rgb(10, 99, 36) ;
+        cursor: pointer;
+     }
+     
+     .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #4CAF50 ;
+        cursor: pointer;
+     }
+    
+     input {
+        border: 0px solid;
+        height: 20px;
+        width: 80px;
+        padding: 10px;
+        /* orange looks awful background-color: #AAF683;*/
+        text-align: center;
+        text-transform: uppercase;
+     }
 
- input.budgets {
-    background-color: transparent;
- }
+     input.budgetInput{
+        background-color:rgba(199, 199, 199, 0.253);
+        font-size: 1.1em;
+        border-radius: 10px;
+     }
+
+     #budgetLeft{
+       margin-right: 50px;
+     }
+     #fromBox {
+       margin-right: 30px;
+     }
+     input.budgets {
+       background-color: transparent;
+       padding: 20px;
+       margin: 10px;
+       /*red orange*/
+       background: #EE6055;
+       color: #fff;
+       font-size: 21px;
+       font-weight: bold;
+       line-height: 1.3em;
+       border: 2px dashed #fff;
+       border-radius: 10px;
+       box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+       text-shadow: -1px -1px #aa3030;
+       font-weight: normal;
+     } 
+
+     .button {
+        padding: 15px 20px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #EE6055;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #ff0030;
+      }
+      
+      .button:hover {background-color: #ff0030}
+      
+      .button:active {
+        background-color: #8f0606;
+        box-shadow: 0 5px #ff0030;
+        transform: translateY(4px);
+      }
+    
+    
+    .page-wrap {
+      min-height: 100%;
+      padding: 20px;
+      /* equal to footer height */
+      margin-bottom: -142px; 
+      margin-top: -80px;
+    }
+    .page-wrap:before {
+      content: "";
+      display: block;
+    }
+    .site-header, .page-wrap:before {
+      height: 80px; 
+    }
+    .site-header {
+       /*aquamarine*/
+      background: #60D394;
+    }
+    .page-wrap:after {
+      content: "";
+      display: block;
+    }
+    .site-footer, .page-wrap:after {
+      height: 142px; 
+    }
+    .site-footer {
+       /*aquamarine*/
+      background: #60D394;
+    }
+    
+    body {
+      padding: 10px;
+    }
