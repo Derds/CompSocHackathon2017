@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Budjit</title>
+  <link rel="stylesheet" type="text/css" href="budjitLUKE.css"/>
+</head>
+
+<body>
+
+<p>
+    <span>
+        <input type="text" id="budgetInput" class="budgetInput" value="1000" placeholder="BUDGET">
+        <button type="button" class="button" onclick="budgetMax()">Set Budget</button>
+    </span>
+
+    <span>
+        <div id="slidecontainer">
+            <input type="range" min="0" max="1000" value="50%" class="slider" id="myRange" oninput="budgetValue(this.value);" step="10">
+        </div>
+    </span>
+</p>
+
+<span>
+    <label for="budgetLeft">Travel</label>
+    <input class="budgets" id="budgetLeft" value="£500">
+</span>
+
+<span>
+    <label for="budgetRight">Accommodation</label>
+    <input class="budgets" id="budgetRight" value="£500">
+</span>
+
+<p>
+    <span>
+        <input id="fromBox" placeholder="FROM">
+        <input id="toBox" placeholder="TO">
+    </span>
+
+    <span>
+            <input id="nightsBox" placeholder="NIGHTS">
+        </span>
+</p>
+
+<p>
+    <span>
+        <button type="button" id="button" class="button" onclick="window.location.href='results.html'">Budjit!</button>
+    </span>
+</p>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script type="text/javascript">
+
+    function budgetValue(val) {
+    document.getElementById("budgetLeft").value="£" + val;
+    document.getElementById("budgetRight").value="£" + (document.getElementById("myRange").max-val);
+    }
+
+    function budgetMax() {
+    var maxBudget = document.getElementById("budgetInput").value;
+    var x = document.getElementById("myRange").max = maxBudget;
+
+    document.getElementById("budgetLeft").value="£" + document.getElementById("myRange").value;
+    document.getElementById("budgetRight").value="£" + (x-document.getElementById("myRange").value);
+    }
+</script>
+<script>
+        $(function() {
+          var availableTags = [
+            "Cardiff",
+            "London",
+            "Reading",
+            "Portsmouth",
+            "Liverpool",
+            "Manchester"
+          ];
+          $("#fromBox").autocomplete({
+            source: availableTags
+          });
+          $("#toBox").autocomplete({
+            source: availableTags
+          });
+        } );
+</script>
+
+
+</body>
+
+</html>
