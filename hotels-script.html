@@ -1,0 +1,17 @@
+<!--"http://api.tripadvisor.com/api/partner/2.0/location_mapper/42.344978,-71.119030?key=<CONTENT API KEY HERE>-mapper&category=hotels&q=Beacon%20Townhouse%20Inn%201023"-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    function hotelChoices(val) {
+    
+    en_UK
+
+    	$.getJSON("http://api.tripadvisor.com/api/partner/2.0/location_mapper/42.344978,-71.119030?key=<CONTENT API KEY HERE>-mapper&category=hotels&q=Beacon%20Townhouse%20Inn%201023", function(data) {
+     
+       		var nameVar = `Name: ${data.member[0].name}<br>`
+       		var station_codeVar = `Station Code: ${data.member[0].station_code}<br>`
+     
+      		$(".mypanel").html(nameVar + station_codeVar);
+  		});
+    }
+    </script>
