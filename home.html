@@ -3,29 +3,46 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Bujit</title>
+  <title>Budjit</title>
   <link rel="stylesheet" type="text/css" href="budjit.css"/>
 </head>
 
 <body>
 
-<input type="text" id="budgetInput" value="1000" placeholder="BUDGET">
+<p>
+    <span>
+        <input type="text" id="budgetInput" value="1000" placeholder="BUDGET">
+        <button type="button" onclick="budgetMax()">Set Budget</button>
+    </span>
 
-<button type="button" onclick="budgetMax()">Set Budget</button>
+    <span>
+        <div id="slidecontainer">
+            <input type="range" min="0" max="1000" value="50%" class="slider" id="myRange" oninput="budgetValue(this.value);" step="10">
+        </div>
+    </span>
+</p>
 
-<div id="slidecontainer">
-<input type="range" min="0" max="1000" value="50%" class="slider" id="myRange" oninput="budgetValue(this.value);" step="10">
-</div>
+<span>
+    <label for="budgetLeft">Travel</label>
+    <input class="budgets" id="budgetLeft" value="£500">
+</span>
+
+<span>
+    <label for="budgetRight">Accommodation</label>
+    <input class="budgets" id="budgetRight" value="£500">
+</span>
+
+<p>
+    <span>
+        <input id="toBox" placeholder="TO">
+    </span>
+
+    <span>
+        <button type="button" onclick="window.location.href='file:///Users/luqas/Documents/Hackathon/results.php'">Budjit!</button>
+    </span>
+</p>
 
 
-<input class="budgets" id="budgetLeft" value="£500">
-<input class="budgets" id="budgetRight" value="£500">
-
-
-<input id="fromBox" placeholder="FROM">
-<input id="toBox" placeholder="TO">
-
-<button type="button" onclick="window.location.href='file:///Users/luqas/Documents/Hackathon/results.php'">Budjit!</button>
 
 
 <script type="text/javascript">
@@ -39,7 +56,7 @@
     var x = document.getElementById("myRange").max = maxBudget;
 
     document.getElementById("budgetLeft").value="£" + document.getElementById("myRange").value;
-    document.getElementById("budgetRight").value="£" + x-document.getElementById("myRange").value;
+    document.getElementById("budgetRight").value="£" + (x-document.getElementById("myRange").value);
     }
 
 </script>
