@@ -1,5 +1,23 @@
+/*Colours: 
+Umber:#5C573E;
+Sunset Orange: #EE6055;
+Sandy Brown: #F79D5C;
+Pale Green: #AAF683;
+Medium Aquamarine: #60D394;
+*/
+
+
 body {
 text-align: center;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+  /*umber*/
+  background-color: #5C573E;
 }
 
 .slider {
@@ -36,15 +54,23 @@ text-align: center;
     border: 0px solid;
     height: 20px;
     width: 80px;
-    color: rgb(0, 0, 0);
+    padding: 10px;
+    /* orange looks awful background-color: #AAF683;*/
+    color: white;
     text-align: center;
  }
-
+ #budgetLeft{
+   margin-right: 50px;
+ }
+ #fromBox {
+   margin-right: 30px;
+ }
  input.budgets ,  button {
     background-color: transparent;
     padding: 20px;
    margin: 10px;
-   background: #ff0030;
+   /*red orange*/
+   background: #EE6055;
    color: #fff;
    font-size: 21px;
    font-weight: bold;
@@ -57,6 +83,35 @@ text-align: center;
  } 
 
 
+.page-wrap {
+  min-height: 100%;
+  padding: 20px;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+  margin-top: -80px;
+}
+.page-wrap:before {
+  content: "";
+  display: block;
+}
+.site-header, .page-wrap:before {
+  height: 80px; 
+}
+.site-header {
+   /*aquamarine*/
+  background: #60D394;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 142px; 
+}
+.site-footer {
+   /*aquamarine*/
+  background: #60D394;
+}
 
 body {
   padding: 10px;
