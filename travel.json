@@ -1,0 +1,177 @@
+[
+  {
+    "company": "Barkarama",
+    "cost": 28,
+    "phone": "+44 (922) 463-3982",
+    "from": "BRISTOL",
+    "to": "CARDIFF"
+  },
+  {
+    "company": "Typhonica",
+    "cost": 38,
+    "phone": "+44 (974) 427-3790",
+    "from": "CARDIFF",
+    "to": "LONDON"
+  },
+  {
+    "company": "Atomica",
+    "cost": 15,
+    "phone": "+44 (935) 503-3592",
+    "from": "CARDIFF",
+    "to": "OXFORD"
+  },
+  {
+    "company": "Organica",
+    "cost": 32,
+    "phone": "+44 (878) 492-3847",
+    "from": "LONDON",
+    "to": "OXFORD"
+  },
+  {
+    "company": "Ginkogene",
+    "cost": 41,
+    "phone": "+44 (844) 439-2646",
+    "from": "LONDON",
+    "to": "BRISTOL"
+  },
+  {
+    "company": "Zilphur",
+    "cost": 29,
+    "phone": "+44 (835) 489-3611",
+    "from": "BRISTOL",
+    "to": "LONDON"
+  },
+  {
+    "company": "Icology",
+    "cost": 37,
+    "phone": "+44 (912) 586-3936",
+    "from": "OXFORD",
+    "to": "BRISTOL"
+  },
+  {
+    "company": "Syntac",
+    "cost": 30,
+    "phone": "+44 (917) 426-2463",
+    "from": "CARDIFF",
+    "to": "SWANSEA"
+  },
+  {
+    "company": "Automon",
+    "cost": 48,
+    "phone": "+44 (865) 433-2980",
+    "from": "SWANSEA",
+    "to": "LONDON"
+  },
+  {
+    "company": "Songlines",
+    "cost": 48,
+    "phone": "+44 (841) 423-3221",
+    "from": "SWANSEA",
+    "to": "LIVERPOOL"
+  },
+  {
+    "company": "Idego",
+    "cost": 34,
+    "phone": "+44 (900) 575-2446",
+    "from": "LIVERPOOL",
+    "to": "LONDON"
+  },
+  {
+    "company": "Zinca",
+    "cost": 39,
+    "phone": "+44 (900) 481-3688",
+    "from": "LIVERPOOL",
+    "to": "OXFORD"
+  },
+  {
+    "company": "Emergent",
+    "cost": 39,
+    "phone": "+44 (907) 429-3764",
+    "from": "LONDON",
+    "to": "CARDIFF"
+  },
+  {
+    "company": "Enervate",
+    "cost": 38,
+    "phone": "+44 (934) 504-3786",
+    "from": "BRISTOL",
+    "to": "SWANSEA"
+  },
+  {
+    "company": "Techmania",
+    "cost": 37,
+    "phone": "+44 (919) 419-3309",
+    "from": "SWANSEA",
+    "to": "LIVERPOOL"
+  },
+  {
+    "company": "Intergeek",
+    "cost": 49,
+    "phone": "+44 (819) 420-3151",
+    "from": "READING",
+    "to": "MANCHESTER"
+  },
+  {
+    "company": "Shadease",
+    "cost": 50,
+    "phone": "+44 (898) 583-2016",
+    "from": "MANCHESTER",
+    "to": "LONDON"
+  },
+  {
+    "company": "Zanymax",
+    "cost": 12,
+    "phone": "+44 (951) 423-3880",
+    "from": "READING",
+    "to": "LONDON"
+  },
+  {
+    "company": "Exoteric",
+    "cost": 21,
+    "phone": "+44 (839) 538-3691",
+    "from": "PORTSMOUTH",
+    "to": "READING"
+  },
+  {
+    "company": "Emoltra",
+    "cost": 35,
+    "phone": "+44 (922) 582-2295",
+    "from": "PORTSMOUTH",
+    "to": "BRISTOL"
+  },
+  {
+    "company": "Bunga",
+    "cost": 50,
+    "phone": "+44 (927) 584-2927",
+    "from": "READING",
+    "to": "CARDIFF"
+  },
+  {
+    "company": "Ecolight",
+    "cost": 48,
+    "phone": "+44 (842) 462-3548",
+    "from": "BATH",
+    "to": "LONDON"
+  },
+  {
+    "company": "Adornica",
+    "cost": 45,
+    "phone": "+44 (905) 405-2924",
+    "from": "BATH",
+    "to": "NOTTINGHAM"
+  },
+  {
+    "company": "Rodeocean",
+    "cost": 47,
+    "phone": "+44 (915) 569-2354",
+    "from": "NOTTINGHAM",
+    "to": "LONDON"
+  },
+  {
+    "company": "Magnemo",
+    "cost": 43,
+    "phone": "+44 (926) 503-2629",
+    "from": "NOTTINGHAM",
+    "to": "PORTSMOUTH"
+  }
+]
