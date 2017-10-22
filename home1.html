@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Budjit</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="budjit.css"/>
+
+</head>
+
+<body>
+
+<p>
+    <span>
+        <input type="text" id="budgetInput" value="100" placeholder="BUDGET">
+        <button type="button" class='button' onclick="budgetMax()">Set Budget</button>
+    </span>
+
+    <span>
+        <div id="slidecontainer">
+            <input type="range" min="0" max="100" value="50%" class="slider" id="myRange" oninput="budgetValue(this.value);" step="5">
+        </div>
+    </span>
+</p>
+
+<span>
+    <label for="budgetLeft">Travel</label>
+    <input class="budgets" id="budgetLeft" value="50">
+</span>
+
+<span>
+    <label for="budgetRight">Accommodation</label>
+    <input class="budgets" id="budgetRight" value="50">
+</span>
+
+<p>
+    <span>
+        <input id="fromBox" placeholder="FROM">
+    </span>
+
+    <span>
+        <input id="toBox" placeholder="TO">
+    </span>
+
+    <span>
+        <input type="number" id="nights" value="2" placeholder="NIGHTS">
+    </span>
+
+    <span>
+        <button id="goBtn" class='button' type="button">Budjit!</button>
+    </span>
+</p>
+
+<div><table id="table" class='table' data-element="table"><tr></tr></table></div>
+<br>
+<br>
+<div><table id="table1" class='table1' data-element="table1"><tr></tr></table></div>
+
+
+
+
+<script type="text/javascript">
+    function budgetValue(val) {
+        document.getElementById("budgetLeft").value=val;
+        document.getElementById("budgetRight").value=(document.getElementById("myRange").max-val);
+    }
+
+    function budgetMax() {
+        var maxBudget = document.getElementById("budgetInput").value;
+        var x = document.getElementById("myRange").max = maxBudget;
+        document.getElementById("budgetLeft").value=document.getElementById("myRange").value;
+        document.getElementById("budgetRight").value=(x-document.getElementById("myRange").value);
+    }
+
+    $(document).ready(function(){
+        $("#goBtn").click(function(){
+            $("table").empty();
+            $("table1").empty();
+            var nightsNum = document.getElementById("nights").value;
+            var accomodationBudget = document.getElementById("budgetRight").value;
+            var travelBudget = document.getElementById("budgetLeft").value;
+            var accomodationFinal = accomodationBudget/nightsNum;
+            var destinationVar = document.getElementById("toBox").value;
+            var originVar = document.getElementById("fromBox").value;
+
+            $.getJSON("hostels.json", function(data) {
+                var tr1;
+                var table = $('[data-element="table"]');
+
+                for (var i = 0; i < data.length; i++) {
+                    tr1 = $('<tr/>');
+                    if ((data[i].cost <= accomodationFinal) && (data[i].near == destinationVar)) {
+                        tr1.append("<td>" + data[i].company + "</td>");
+                        tr1.append("<td>" + "£" + data[i].cost + "</td>");
+                        tr1.append("<td>" + data[i].address + "</td>");
+                        $('#table').append(tr1);
+                    }
+                }
+            });
+
+            $.getJSON("travel.json", function(data) {
+                var tr2;
+                var table = $('[data-element="table1"]');
+
+                for (var i = 0; i < data.length; i++) {
+                    tr2 = $('<tr/>');
+                    if ((data[i].cost <= travelBudget) && (data[i].to == destinationVar) && (data[i].from == originVar)) {
+                        tr2.append("<td>" + data[i].company + "</td>");
+                        tr2.append("<td>" + "£" + data[i].cost + "</td>");
+                        tr2.append("<td>" + data[i].from + "</td>");
+                        tr2.append("<td>" + data[i].to + "</td>");
+                        $('#table1').append(tr2);
+                    }
+                }
+            });
+        });
+    });
+
+</script>
+
+</body>
+
+</html>
